@@ -16,6 +16,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
+import { MatBottomSheet } from '@angular/material';
+
 import { AppRouterModule } from './app-router.module';
 
 import { AppComponent } from './app.component';
@@ -69,6 +71,7 @@ import { CocktailModalComponent } from './components/cocktail-modal/cocktail-mod
   ],
   providers: [
     CocktailsApiService,
+    MatBottomSheet,
   ],
   entryComponents: [
     CocktailModalComponent,
