@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~normalize.css/normalize.css";
+
+body {
+  font: 400 14px/22px Roboto,"Helvetica Neue",sans-serif;
+  color: #505050;
+  background: aliceblue;
+}
+
+.g-align__center {
+  text-align: center;
+}
+
+.g-flex {
+  display: flex;
+}
+.g-flex__column {
+  flex-direction: column;
+}
+.g-flex__stretch {
+  flex: 1;
+}
+.g-flex__align__stretch {
+  align-items: stretch;
+}
+.g-flex__justify__stretch {
+  align-items: stretch;
+}
+.g-flex__items__stretch {
+  align-items: stretch;
+}
+.g-flex__justify__center {
+  justify-content: space-around;
+}
+.g-flex__align__center {
+  align-items: center;
+}

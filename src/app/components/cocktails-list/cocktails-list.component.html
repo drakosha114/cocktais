@@ -1,0 +1,13 @@
+<div class="g-flex g-flex__stretch g-flex__justify__center g-flex__column" *ngIf="!isLoading&&!isLoaded">
+  <p class="g-align__center">You did not look for anything.</p>
+</div>
+<div class="g-flex g-flex__stretch g-flex__align__center g-flex__justify__center g-flex__column" *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
+</div>
+<div class="g-flex g-flex__stretch g-flex__justify__center g-flex__column" *ngIf="!isLoading&&isLoaded&&!items.length">
+  <p class="g-align__center">Not Found</p>
+</div>
+<mat-list *ngIf="!isLoading&&items.length">
+  <app-cocktail-list-item *ngFor="let cocktail of items" [cocktail]="cocktail" (pressHandler)="onPress($event)"></app-cocktail-list-item>
+  <mat-divider></mat-divider>
+</mat-list>

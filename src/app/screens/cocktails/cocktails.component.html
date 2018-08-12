@@ -1,0 +1,5 @@
+<div class="g-flex g-flex__stretch g-flex__align__stretch g-flex__column">
+  <app-page-title title="Cocktails List"></app-page-title>
+  <app-search-input [debounceTime]="700" [placeholder]="'search cocktails'"  (ChangeValue)="onChange($event)" (ClearValue)="onClear()"></app-search-input>
+  <app-cocktails-list class="g-flex g-flex__stretch g-flex__align__stretch g-flex__column " [isLoaded]="isLoaded" [isLoading]="isLoading" [items]="cocktais" (itemPressHandler)="onPress($event)"></app-cocktails-list>
+</div>

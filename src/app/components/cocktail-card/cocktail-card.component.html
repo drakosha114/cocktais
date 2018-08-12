@@ -1,0 +1,21 @@
+<div class="g-flex g-flex__column g-flex__stretch g-flex__align__stretch cocktail-card-container">
+  <div class="g-flex g-flex__column g-flex__align__center g-flex__justify__center cocktail-card-loader" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div class="g-flex g-flex__column g-flex__align__center g-flex__justify__center cocktail-card-text" *ngIf="!isLoading&&isLoaded&&!cocktail">
+    <p>Not found</p>
+  </div>
+  <mat-card *ngIf="!isLoading&&cocktail" class="coctail-card">
+    <mat-card-header>
+      <mat-card-title>{{cocktail.strDrink}}</mat-card-title>
+      <mat-card-subtitle>{{cocktail.strAlcoholic}}</mat-card-subtitle>
+      <mat-card-subtitle>{{cocktail.strCategory}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{cocktail.strDrinkThumb}}" alt="{{cocktail.strDrink}}">
+    <mat-card-content>
+      <p>
+        {{cocktail.strInstructions}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

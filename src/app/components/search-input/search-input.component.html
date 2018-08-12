@@ -1,0 +1,8 @@
+<div class="search_wrapper">
+  <mat-form-field class="search-field">
+    <input appDebounceInput (Change)='onChange($event)' [debounceTime]="debounceTime" class="search-input" matInput type="text" [placeholder]="placeholder" [(ngModel)]="value">
+    <button class="search-clear" mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="onClear()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>

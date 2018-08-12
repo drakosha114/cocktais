@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://www.thecocktaildb.com',
+  apiEndpoints: {
+    cocktails: 'api/json/v1/1/search.php',
+    cocktail: 'api/json/v1/1/lookup.php'
+  }
 };
 
 /*

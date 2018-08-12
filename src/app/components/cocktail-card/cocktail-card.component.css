@@ -1,0 +1,8 @@
+.cocktail-card-container .coctail-card {
+  box-shadow: none;
+  width: 600px;
+}
+.cocktail-card-loader,
+.cocktail-card-text {
+  min-height: 400px;
+}
